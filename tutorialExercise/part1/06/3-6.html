@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>클로저를 이용하여 합 구하기</title>
+</head>	
+<body>	
+ <script>
+	 function sum(a) {
+		 return function(b) {
+			 return a + b;
+		 };
+	 }
+
+	 alert(sum(1)(2));
+	 alert(sum(5)(-1));
+
+ </script>
+</body>
+</html>

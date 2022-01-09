@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Is variable visible?</title>
+</head>	
+<body>	
+ <script>
+	let x = 1;
+
+	function func() {
+		let x = 2;
+		console.log(x); // ?   ->정답 :에러남. 함
+						// 함수안에 지역변수로 선언되어있기 때문에
+						// 함수 밖 전역변수에 접근 불가함.
+						// 함수안에서는 순서의 문제로 에러남
+
+	
+	}
+
+	func();
+
+	
+ </script>
+</body>
+</html>
